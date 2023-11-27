@@ -541,7 +541,28 @@
     }
   }
 }
-
+@media screen and (max-width: 360px) {
+  .course__box {
+    max-width: 162px;
+  }
+  .course__box-info {
+    .info_head {
+      h3 {
+        @include text(#333, "Poppins", 8px, 500, 16px);
+      }
+    }
+    .info_foot {
+      .info_week {
+        p {
+          @include text(#000, "Poppins", 10px, 400, 36px);
+        }
+      }
+      & > p {
+        @include text(#09b451, "Poppins", 10px, 600, normal);
+      }
+    }
+  }
+}
 // Learn Skill section
 .learnSkill__wrapper {
   margin: 100px auto;
