@@ -1,0 +1,279 @@
+// navbar
+
+#navbar {
+  z-index: 9;
+}
+
+.navbar__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 20px;
+  z-index: 9;
+}
+.nav__menu {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.nav__list-item {
+  @include text(rgba(64, 64, 64, 0.8), "Open Sans", 16px, 600, 48px);
+  letter-spacing: -0, 32px;
+}
+.nav__list-item:hover {
+  color: rgba(64, 64, 64, 1);
+}
+
+.nav__contact {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  .search {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .login {
+    @include text(#09b451, "Source Sans 3", 16px, 600, normal);
+  }
+
+  .register {
+    @include button;
+    border-radius: 5px;
+  }
+}
+
+.burger__icon {
+  width: 32px;
+  height: 32px;
+  display: none; //flex
+  align-items: center;
+  flex-direction: column;
+  padding: 5px;
+  justify-content: space-between;
+  outline: 1px solid rgb(248, 248, 248);
+  cursor: pointer;
+  border-radius: 3px;
+  z-index: 9999;
+
+  span {
+    width: 100%;
+    height: 3px;
+    // border-radius: 50px;
+    background-color: #000;
+    display: flex;
+  }
+}
+
+.contact__avatar {
+  display: none; // Flex
+  width: 32px;
+  height: 32px;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    width: 100%;
+  }
+}
+
+#burger {
+  display: none;
+}
+@media screen and (max-width: 1024px) {
+  #navbar {
+    box-shadow: 1px 1px 16px 0px rgb(209, 209, 209);
+  }
+  .nav__menu {
+    // display: none;
+
+    position: absolute;
+    flex-direction: column;
+    top: 0px;
+    left: 0px;
+    padding: 100px 20px;
+    width: 40%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.616);
+    gap: 15px;
+    align-items: flex-start;
+    z-index: 999;
+    transform: translateX(-100%);
+    transition: all 0.3s ease;
+
+    .nav__menu-list {
+      border-bottom: 1px solid rgba(253, 253, 253, 0.8);
+    }
+    .nav__list-item {
+      @include text(rgba(253, 253, 253, 0.8), "Open Sans", 14px, 400, 28px);
+      letter-spacing: -0, 32px;
+    }
+  }
+
+  #burger:checked ~ .nav__menu {
+    transform: translateX(0%);
+  }
+  #burger:checked ~ .burger__icon {
+    transition: all 0.3 ease;
+    span:nth-child(1) {
+      width: 34px;
+      transform: rotate(45deg);
+      transform-origin: left center;
+      -ms-transform: rotate(45deg);
+      -webkit-transform: rotate(45deg);
+      translate: 5px -2px;
+      transition: all 0.3s ease;
+      background-color: #fff;
+    }
+    span:nth-child(2) {
+      display: none;
+    }
+    span:nth-child(3) {
+      transform: rotate(-45deg);
+      width: 34px;
+      translate: 6px 3px;
+
+      transition: all 0.3s ease;
+      -ms-transform: rotate(-45deg);
+      -webkit-transform: rotate(-45deg);
+      transform-origin: bottom left;
+      background-color: #fff;
+    }
+  }
+
+  .contact__avatar {
+    display: flex;
+  }
+  .burger__icon {
+    display: flex;
+  }
+}
+@media screen and (max-width: 767px) {
+  .nav__contact {
+    display: none;
+  }
+}
+
+// End of Navbar
+
+.header {
+  margin: 10px auto 0;
+  padding: 60px;
+  background-color: #f6fcf8;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 50px;
+  position: relative;
+  z-index: 4;
+  position: relative;
+
+  & > span {
+    display: inline-block;
+    margin-left: auto;
+    width: 200px;
+    top: 0;
+    right: 0;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    height: 100%;
+    position: absolute;
+    background-color: #e4ffff;
+    z-index: -1;
+  }
+}
+.header__info {
+  max-width: 589px;
+
+  h1 {
+    @include text(#000, "Poppins", 60px, 700, normal);
+
+    span {
+      color: #09b451;
+    }
+  }
+
+  .btn {
+    @include button;
+    border: none;
+    padding: 20px 43px;
+    margin-top: 48px;
+    border-radius: 5px;
+  }
+}
+
+.header__img {
+  max-width: 600px;
+
+  img {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 767px) and (max-width: 1024px) {
+  .header {
+    flex-wrap: wrap;
+    & > span {
+      width: 100px;
+    }
+  }
+  .header__info {
+    width: 100%;
+
+    .btn {
+      margin-top: 24px;
+    }
+  }
+
+  .header__img {
+    display: none;
+  }
+}
+@media screen and (max-width: 767px) {
+  .header {
+    padding: 20px 10px;
+    flex-wrap: wrap;
+    border-radius: 0px;
+
+    & > span {
+      width: 100px;
+      border-top-right-radius: 0px;
+      border-bottom-right-radius: 0px;
+    }
+  }
+  .header__info {
+    max-width: 300px;
+
+    h1 {
+      @include text(#000, "Poppins", 32px, 700, normal);
+
+      span {
+        color: #09b451;
+      }
+    }
+
+    .btn {
+      @include button;
+      border: none;
+      padding: 20px 42px;
+      margin-top: 18px;
+      border-radius: 5px;
+    }
+  }
+  .header__img {
+    width: 100%;
+    margin: 70px auto 60px;
+    img {
+      width: 100%;
+      margin-left: -20px;
+    }
+  }
+}

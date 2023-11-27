@@ -1,0 +1,568 @@
+// Skills
+#skills {
+  margin: 80px auto 140px;
+}
+.skills {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  & > span {
+    position: absolute;
+  }
+}
+.skill__box {
+  padding: 10px 22px 10px 17px;
+  background-color: #ddffff;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  .img__box {
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+    background-color: #09b451;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img {
+      width: 100%;
+    }
+  }
+
+  p {
+    @include text(#000, "Poppins", 16px, 400, normal);
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .skills {
+    margin: 50px auto 100px;
+  }
+  .skill__box {
+    justify-content: space-around;
+    margin: 10px auto;
+  }
+}
+@media screen and (max-width: 767px) {
+  #skills {
+    margin: 0;
+  }
+  .skills {
+    margin: 0px auto 70px;
+    background-color: #f6fcf8;
+    position: relative;
+    z-index: 0;
+    padding: 0;
+
+    & > span {
+      display: inline-block;
+      width: 100px;
+      height: 100%;
+      position: absolute;
+      background-color: #e4ffff;
+      top: 0;
+      right: 0;
+      z-index: -1;
+    }
+  }
+  .skill__box {
+    margin-bottom: 24px;
+    .img__box {
+      width: 35.795px;
+      height: 35.795px;
+      padding: 7.159px;
+      img {
+        width: 100%;
+      }
+    }
+
+    p {
+      @include text(#000, "Poppins", 14.318px, 400, normal);
+    }
+  }
+}
+
+// Cartegory
+
+.cartegory__wrapper {
+  display: flex;
+  margin: 60px auto 100px;
+  flex-direction: column;
+  position: relative;
+}
+.cartegory__head {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  h2 {
+    @include text(#333, "Poppins", 32px, 600, normal);
+  }
+
+  a {
+    @include text(#333, "Poppins", 24px, 400, normal);
+  }
+}
+.cartegory__section {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 60px;
+  position: relative;
+}
+.section__box {
+  max-width: 291px;
+  height: 432px;
+  position: relative;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  h3 {
+    position: absolute;
+    bottom: 8px;
+    left: 20px;
+    @include text(#fff, "Poppins", 32px, 600, normal);
+  }
+}
+.toggle__icon {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  position: absolute;
+  padding: 0 20px;
+  top: 50%;
+  left: 0;
+
+  span {
+    display: flex;
+    width: 60px;
+    height: 60px;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 100px;
+    cursor: pointer;
+    img {
+      width: 30px;
+      height: 30px;
+    }
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .cartegory__wrapper {
+    margin: 30px auto 50px;
+  }
+  .cartegory__head {
+    align-items: flex-start;
+
+    h2 {
+      @include text(#333, "Poppins", 24px, 500, normal);
+    }
+    a {
+      @include text(#333, "Poppins", 18px, 400, normal);
+    }
+  }
+  .cartegory__section {
+    margin-top: 30px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    gap: 32px;
+    width: 100%;
+    height: 100%;
+  }
+  .section__box {
+    width: 180px;
+    height: 280px;
+    position: relative;
+    flex-shrink: 0;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    h3 {
+      position: absolute;
+      bottom: 8px;
+      left: 10px;
+      @include text(#fff, "Poppins", 18px, 600, normal);
+    }
+  }
+  .toggle__icon {
+    display: none;
+  }
+}
+@media screen and (max-width: 767px) {
+  .cartegory__wrapper {
+    margin: 30px auto 50px;
+  }
+  .cartegory__head {
+    align-items: flex-start;
+
+    h2 {
+      @include text(#333, "Poppins", 16px, 500, normal);
+      max-width: 225px;
+    }
+    a {
+      @include text(#333, "Poppins", 14px, 400, normal);
+    }
+  }
+
+  .cartegory__section {
+    margin-top: 20px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    gap: 16px;
+    width: 100%;
+    height: 100%;
+  }
+
+  .section__box {
+    width: 116px;
+    height: 133px;
+    position: relative;
+    flex-shrink: 0;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    h3 {
+      position: absolute;
+      bottom: calc(50% - 13px);
+      left: 5px;
+      @include text(#fff, "Poppins", 14px, 600, normal);
+    }
+  }
+  .toggle__icon {
+    display: none;
+  }
+}
+
+// Courses
+
+.courses__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.course__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  h2 {
+    @include text(#333, "Poppins", 32px, 600, normal);
+    text-transform: capitalize;
+  }
+
+  .btn {
+    @include button;
+    padding: 8px 16px;
+    display: flex;
+    justify-content: center;
+    border-radius: 100px;
+    gap: 4px;
+    align-items: center;
+    @include text(#fff, "Poppins", 18px, 400, normal);
+
+    img {
+      filter: brightness(30);
+      rotate: 90deg;
+    }
+  }
+  .skillBtn {
+    display: none;
+  }
+}
+.course__section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.course__box {
+  display: flex;
+  flex-direction: column;
+  max-width: 391px;
+  margin-top: 40px;
+  box-shadow: 0px 0px 20px 0px rgba(203, 203, 203, 0.25);
+  border-radius: 10px;
+  img {
+    width: 100%;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+  }
+}
+.course__box-info {
+  padding: 24px 24px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 42px;
+
+  .info_head {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+
+    h3 {
+      @include text(#333, "Poppins", 24px, 500, normal);
+      text-transform: capitalize;
+    }
+
+    & > span {
+      display: flex;
+      gap: 6px;
+      align-items: center;
+
+      img {
+        width: 18px;
+        height: 18px;
+        object-fit: contain;
+      }
+
+      p {
+        @include text(#000, "Poppins", 16px, 400, 36px);
+      }
+    }
+  }
+
+  .info_foot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .info_week {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+
+      span {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        img {
+          object-fit: contain;
+          width: 16px;
+          height: 16px;
+        }
+      }
+
+      p {
+        @include text(#000, "Poppins", 16px, 400, 36px);
+      }
+    }
+    & > p {
+      @include text(#09b451, "Poppins", 24px, 600, normal);
+    }
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .course__section {
+    justify-content: space-around;
+  }
+  .course__head {
+    h2 {
+      @include text(#333, "Poppins", 24px, 600, normal);
+    }
+
+    .btn {
+      @include button;
+      padding: 6px 12px;
+      gap: 4px;
+      @include text(#fff, "Poppins", 16px, 400, normal);
+
+      img {
+        filter: brightness(30);
+        rotate: 90deg;
+      }
+    }
+
+    .skillBtn {
+      display: flex;
+    }
+  }
+
+  .course__box {
+    max-width: 291px;
+    margin-top: 30px;
+    border-radius: 10px;
+  }
+
+  .course__box-info {
+    padding: 18px 18px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    .info_head {
+      h3 {
+        @include text(#333, "Poppins", 16px, 500, normal);
+        text-transform: capitalize;
+      }
+      & > span {
+        display: flex;
+        gap: 6px;
+        align-items: center;
+
+        img {
+          width: 16px;
+          height: 16px;
+          object-fit: contain;
+        }
+
+        p {
+          @include text(#000, "Poppins", 14px, 400, 26px);
+        }
+      }
+    }
+
+    .info_foot {
+      flex-direction: column-reverse;
+      align-items: flex-start;
+      .info_week {
+        gap: 2px;
+
+        span {
+          display: flex;
+          align-items: center;
+          gap: 6px;
+
+          img {
+            object-fit: contain;
+            width: 12px;
+            height: 12px;
+          }
+        }
+
+        p {
+          @include text(#000, "Poppins", 16px, 400, 36px);
+        }
+      }
+      & > p {
+        @include text(#09b451, "Poppins", 24px, 600, normal);
+      }
+    }
+  }
+}
+@media screen and (max-width: 767px) {
+  .course__head {
+    h2 {
+      @include text(#333, "Poppins", 16px, 600, normal);
+    }
+
+    .btn {
+      @include button;
+      padding: 4px 8px;
+      gap: 2px;
+      @include text(#fff, "Poppins", 12px, 400, normal);
+
+      img {
+        width: 16.977px;
+        height: 16.977px;
+        filter: brightness(30);
+        rotate: 90deg;
+      }
+    }
+    .skillBtn {
+      display: flex;
+    }
+  }
+
+  .course__box {
+    max-width: 172px;
+    margin-top: 20px;
+    border-radius: 10px;
+  }
+  .course__box-info {
+    padding: 12px 12px 9px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    .info_head {
+      h3 {
+        @include text(#333, "Poppins", 10px, 500, 16px);
+        text-transform: capitalize;
+      }
+      & > span {
+        display: flex;
+        gap: 2px;
+        align-items: center;
+
+        img {
+          width: 8px;
+          height: 8px;
+          margin-top: -2px;
+          object-fit: contain;
+        }
+
+        p {
+          @include text(#000, "Poppins", 8px, 400, 18px);
+        }
+      }
+    }
+
+    .info_foot {
+      flex-direction: column-reverse;
+      align-items: flex-start;
+      .info_week {
+        gap: 2px;
+        justify-content: space-between;
+        width: 100%;
+
+        span {
+          display: flex;
+          align-items: center;
+          gap: 6px;
+
+          img {
+            object-fit: contain;
+            width: 12px;
+            height: 12px;
+          }
+        }
+
+        p {
+          @include text(#000, "Poppins", 12px, 400, 36px);
+        }
+      }
+      & > p {
+        @include text(#09b451, "Poppins", 14px, 600, normal);
+      }
+    }
+  }
+}
+
+// Learn Skill section
+.learnSkill__wrapper {
+  margin: 100px auto;
+}
+.learnSkill__section {
+  position: relative;
+
+  .learnSkill__icon {
+    top: 30%;
+  }
+}
+.disNon {
+  display: none;
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .disNon {
+    display: flex;
+  }
+}
+@media screen and (max-width: 767px) {
+  .disNon {
+    display: flex;
+  }
+}
