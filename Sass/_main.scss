@@ -631,7 +631,7 @@
 .education__info {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 32px;
   h3 {
     @include text(#333, "Poppins", 48px, 600, normal);
   }
@@ -639,11 +639,34 @@
 .education__info-item {
   gap: 24px;
 
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+
   .info__item {
+    display: flex;
+    align-items: center;
     gap: 18px;
 
+    .item__img {
+      width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #ddffff;
+      border-radius: 100px;
+      padding: 13px;
+
+      img {
+        width: 24px;
+        height: 24px;
+      }
+    }
+
     p {
-      @include text(#333, "Poppins", 16px, 500, normal);
+      @include text(#333, "Poppins", 20px, 500, normal);
+      width: 100%;
     }
   }
 }

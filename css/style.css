@@ -1124,7 +1124,7 @@ a {
 .education__info {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 32px;
 }
 .education__info h3 {
   color: #333;
@@ -1137,17 +1137,37 @@ a {
 
 .education__info-item {
   gap: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
 }
 .education__info-item .info__item {
+  display: flex;
+  align-items: center;
   gap: 18px;
+}
+.education__info-item .info__item .item__img {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ddffff;
+  border-radius: 100px;
+  padding: 13px;
+}
+.education__info-item .info__item .item__img img {
+  width: 24px;
+  height: 24px;
 }
 .education__info-item .info__item p {
   color: #333;
   font-family: "Poppins", sans-serif;
-  font-size: 16px;
+  font-size: 20px;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
+  width: 100%;
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
