@@ -2134,6 +2134,22 @@ a {
   outline: none;
   color: #3bd27b;
 }
+.footer__contact form ::-moz-placeholder {
+  color: #3bd27b;
+  opacity: 0.7; /* Firefox */
+}
+.footer__contact form :-ms-input-placeholder {
+  color: #3bd27b;
+  opacity: 0.7; /* Firefox */
+}
+.footer__contact form ::placeholder {
+  color: #3bd27b;
+  opacity: 0.7; /* Firefox */
+}
+.footer__contact form ::-ms-input-placeholder {
+  /* Edge 12 -18 */
+  color: #3bd27b;
+}
 .footer__contact form button {
   display: flex;
   align-items: center;

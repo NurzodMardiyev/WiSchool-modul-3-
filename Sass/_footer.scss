@@ -72,15 +72,15 @@
       outline: none;
       color: #3bd27b;
     }
-    // ::placeholder {
-    //   color: #3bd27b;
-    //   opacity: 0.7; /* Firefox */
-    // }
+    ::placeholder {
+      color: #3bd27b;
+      opacity: 0.7; /* Firefox */
+    }
 
-    // ::-ms-input-placeholder {
-    //   /* Edge 12 -18 */
-    //   color: #3bd27b;
-    // }
+    ::-ms-input-placeholder {
+      /* Edge 12 -18 */
+      color: #3bd27b;
+    }
 
     button {
       display: flex;
