@@ -1,0 +1,167 @@
+#footer {
+  width: 100%;
+  background-color: #000;
+  color: #fff;
+}
+.footer__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.footer__wrap {
+  display: flex;
+  padding: 120px 20px 100px;
+  gap: 90px;
+}
+.footer__logo {
+  display: flex;
+  flex-direction: column;
+  max-width: 296px;
+  gap: 30px;
+
+  img {
+    width: 132px;
+    object-fit: contain;
+  }
+
+  .media {
+    width: 158px;
+  }
+
+  p {
+    @include text(#fff, "Poppins", 16px, 400, normal);
+    letter-spacing: 1px;
+    text-transform: lowercase;
+  }
+}
+.footer__menu {
+  display: flex;
+  gap: 70px;
+
+  .footer__menu-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    a {
+      @include text(#fff, "Open Sans", 14px, 400, 25px);
+      text-transform: capitalize;
+    }
+  }
+}
+.footer__contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  p {
+    @include text(#fff, "Poppins", 24px, 600, normal);
+    margin-bottom: 17px;
+  }
+
+  form {
+    display: flex;
+    margin-bottom: 52px;
+    max-width: 545px;
+    position: relative;
+
+    input {
+      @include text(#3bd27b, "Poppins", 14px, 500, normal);
+      width: 100%;
+      padding: 18px;
+      border: none;
+      outline: none;
+      color: #3bd27b;
+    }
+    // ::placeholder {
+    //   color: #3bd27b;
+    //   opacity: 0.7; /* Firefox */
+    // }
+
+    // ::-ms-input-placeholder {
+    //   /* Edge 12 -18 */
+    //   color: #3bd27b;
+    // }
+
+    button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #3bd27b;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      width: 126px;
+      @include text(#fff, "Poppins", 14px, 500, normal);
+    }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .footer__menu {
+    .noActive {
+      display: none;
+    }
+  }
+}
+@media screen and (max-width: 767px) {
+  .footer__wrapper {
+    flex-direction: column-reverse;
+  }
+  .footer__wrap {
+    flex-direction: column-reverse;
+    padding: 40px 0px;
+    gap: 48px;
+  }
+
+  .footer__logo {
+    gap: 24px;
+
+    p {
+      display: none;
+    }
+  }
+
+  .footer__menu {
+    gap: 30px;
+
+    .footer__menu-list {
+      display: flex;
+
+      a {
+        @include text(#fff, "Open Sans", 12px, 400, 25px);
+      }
+    }
+  }
+
+  .footer__contact {
+    margin-top: 63px;
+    align-items: flex-start;
+    p {
+      @include text(#fff, "Poppins", 14px, 600, normal);
+      margin-bottom: 5px;
+      text-align: start;
+    }
+
+    form {
+      display: flex;
+      margin-bottom: 0px;
+      width: 100%;
+      position: relative;
+
+      input {
+        @include text(#3bd27b, "Poppins", 10px, 500, normal);
+        width: 100%;
+        padding: 10px;
+      }
+      button {
+        @include text(#fff, "Poppins", 10px, 500, normal);
+      }
+    }
+  }
+
+  .footer__menu {
+    .noActive {
+      display: none;
+    }
+  }
+}
